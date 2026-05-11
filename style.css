@@ -63,13 +63,13 @@ h1 {
 }
 
 #quote::before {
-  content: "“";
+  content: "''";
   color: #60a5fa;
   font-size: 54px;
 }
 
 #quote::after {
-  content: "”";
+  content: "''";
   color: #ec4899;
   font-size: 54px;
 }
