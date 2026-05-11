@@ -1,38 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  text-align: center;
-  margin-top: 80px;
-  color: #333;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  font-family: "Inter", sans-serif;
+
+  background:
+    radial-gradient(circle at top left, #3b82f6 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #ec4899 0%, transparent 30%),
+    linear-gradient(135deg, #0f172a, #111827);
+
+  color: white;
+
+  padding: 20px;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 52px;
+  font-weight: 700;
+
+  text-align: center;
+
+  background: linear-gradient(90deg, #fff, #cbd5e1);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #quote {
-  font-size: 1.5rem;
-  font-style: italic;
-  margin: 20px;
+  max-width: 800px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  font-size: 32px;
+  line-height: 1.6;
+
+  border-radius: 28px;
+
+  background: rgba(245, 247, 250, 0);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.35);
+
+  position: relative;
 }
+
+#quote::before {
+  content: "“";
+  color: #60a5fa;
+  font-size: 54px;
+}
+
+#quote::after {
+  content: "”";
+  color: #ec4899;
+  font-size: 54px;
+}
+
 
 #author {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 18px;
+  color: #94a3b8;
 }
 
+
 button {
-  padding: 10px 20px;
-  font-size: 1rem;
   border: none;
-  background: #4CAF50;
-  color: white;
-  border-radius: 5px;
+
+  padding: 16px 34px;
+
+  border-radius: 16px;
+
   cursor: pointer;
-  margin-top: 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 10px 25px rgba(59,130,246,0.35);
 }
 
 button:hover {
-  background: #45a049;
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 35px rgba(59,130,246,0.5);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #quote {
+    font-size: 24px;
+    padding: 30px;
+  }
 }
